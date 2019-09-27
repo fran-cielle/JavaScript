@@ -1,0 +1,170 @@
+Exercicio 01
+
+function calcularDesconto(valor){
+  let desconto = valor*0.05;
+  return desconto;
+}
+
+let resultado =  calcularDesconto(67);
+alert(resultado);
+
+Exercicio 02
+
+function calcularDivisao(valor1,valor2){
+  let divisao = valor1 / valor2;
+  
+  let resto = valor1 % valor2;
+  
+  console.log("O resultado da divisão é: " + divisao, "O resto é: " + resto);
+}
+
+calcularDivisao(12,43);
+
+
+Exercicio 03
+
+function CalcularIMC(altura,peso){
+  let imc = peso/(altura**2);
+  
+  console.log(imc);
+}
+
+CalcularIMC(120,170);
+
+25-09
+
+/********* Ex 04  ************/
+function calculaBaskara(a,b,c){
+  let delta = b**2 - 4*a*c;
+  
+  let x1 = (-b + Math.sqrt(delta))/ (2*a);
+  
+  let x2 = (-b - Math.sqrt(delta))/ (2*a);
+  
+  console.log('O valor de x1 é: ' + x1 + '. O valor de x2 é:' + x2);
+  
+}
+
+/********* Ex 05  ************/
+calculaBaskara(1,5,4);
+
+
+function calculaDelta(a,b,c){
+  let delta = b**2 - 4*a*c;
+  
+  console.log('delta: ' + delta);
+  
+  return delta
+}
+
+/********* Atribuir a FUNÇÃO a uma VARIÁVEL GLOBAL ************/
+let delta = calculaDelta(1,5,4);
+
+
+function calculaX1(a,b,delta){
+  let x1 = (-b + Math.sqrt(delta))/ (2*a);
+    
+   console.log('O valor de x1 é: ' + x1);
+}
+
+
+function calculaX2(a,b,delta){
+   let x2 = (-b - Math.sqrt(delta))/ (2*a);
+    
+   console.log('O valor de x2 é: ' + x2);
+}
+
+calculaDelta(1,5,4);
+calculaX1(1,5,delta);
+calculaX2(1,5,delta);
+
+/********* Ex 06  ************/
+
+
+let idade = prompt('Qual a sua idade?');
+
+function calcDiasVividos(idade){
+  let dias = idade * 365; 
+  return dias; 
+}
+
+let dias = calcDiasVividos(idade);
+alert('Você viveu ' + dias + ' dias.');
+
+/********* Ex 07 e 08  ************/
+
+function calcBpm(){
+  let bathoras = 70 * 60;
+  let bpd = bathoras * 24;
+  
+  return bpd;
+}
+
+
+let idade = prompt('Qual a sua idade?');
+
+function calcDiasVividos(idade){
+  let dias = idade * 365; 
+  return dias; 
+}
+
+let dias = calcDiasVividos(idade);
+let batimento = calcBpm();
+
+console.log(dias * batimento);
+
+25/09
+
+/********* Ex 01  ************/
+
+function inverter(numero){
+  return numero.toString().split('')
+.reverse()// inverte as letras
+.join('');
+}
+console.log(inverter('1234'));
+
+
+/********* Ex 02  ************/
+
+function ordenarLetras(palavra){
+  return palavra.split('').sort().join('');
+}
+
+console.log(ordenarLetras('francielle'));
+
+
+
+/********* Ex 03  ************/
+
+
+function iniciaisNomeSobrenome(nome){
+  let espaco = nome.indexOf(' ');// Localiza um caracter/o elemento após o elemento dentro do parametro
+  let letra1 = nome.substr(0,1);
+  let letra2 = nome.substr(espaco+1,1);
+  
+  return letra1+letra2;
+
+}
+
+
+/********* Ex 04  ************/
+
+function bilheteSorteado(bilhetes){
+  return Math.floor(Math.random() * bilhetes * + 1);
+  
+}
+console.log(bilheteSorteado(123))
+
+console.log(iniciaisNomeSobrenome('Francielle Nascimento'));
+
+
+/********* Ex 05  ************/]
+function CalcularIMC(altura,peso){
+  let imc = peso/(altura**2);
+  
+  console.log(imc.toFixed(2));
+  
+}
+
+CalcularIMC(1.70,63);
