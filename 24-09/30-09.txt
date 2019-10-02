@@ -1,0 +1,35 @@
+30/09
+
+/******Correção Exercicio 3 *********/
+function verificarParOuImpar(numero){
+  if(typeof numero !== 'number'){
+    return 'Isso não é um número';
+  }
+  
+  if(numero % 2 === 0){
+    return 'Numero é par';
+  }else{
+    return 'Numero é Impar';
+  }
+}
+
+console.log(verificarParOuImpar(2));
+
+
+/******Correção Exercicio 4 *********/
+
+/******Correção Exercicio 5 *********/
+
+function classificarProduto(codProduto){
+  if (codProduto ===1 ){
+    return 'Alimento não-perecível';
+  }else if(codProduto >= 2 && codProduto <= 4){
+    return 'Alimento Perecível';
+  }else if(codProduto === 5 || codProduto === 6){
+    return'Vestuário';
+  }else if(codProduto === 7){
+    return 'Higiene Pessoal';
+  }
+  
+}
+//Terminar

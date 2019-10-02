@@ -1,0 +1,89 @@
+/****** Exercicio 01 ********/
+function calcularPontos(resultado){
+  if(resultado === 'v'){
+    return '3 pontos';
+  }else if(resultado === 'e') {
+    return '1 ponto';
+  }else if(resultado === 'd'){
+    return '0 ponto';
+  }else{
+    return 'Resultado desconhecido';
+  }
+}
+console.log(calcularPontos('v'));
+console.log(calcularPontos('d'));
+console.log(calcularPontos('e'));
+
+
+outro jeito de fazer
+
+function calcularPontos(resultado){
+  switch (resultado){
+    case 'v':
+      return '3 pontos';
+    case 'e':
+      return '1 ponto';
+    case 'd':
+      return '0 ponto';
+    default:
+     return 'resultado inválido';
+              
+  }
+}
+console.log(calcularPontos('v'));
+console.log(calcularPontos('d'));
+console.log(calcularPontos('e'));
+
+/****** Exercicio 02 ********/
+function checar(){
+  let palavraInvertida =  palavra.split('').reverse().join('');
+  
+  if (palavra === palavraInvertida){
+    return "A palavra é";
+  }else{
+    return "A palavra não é";
+  }
+  
+}
+
+let palavra = prompt ('Digite uma palavra');
+console.log(checar(palavra))
+
+/****** Exercicio 03 ********/
+function checarNumero(){
+
+  if (numero % 2 === 0){
+    return 'O número é par';
+  }
+  else{
+    return 'O número é impar';
+  }
+}
+
+let numero = prompt('Digite um número');
+console.log(checarNumero(numero/2));
+
+
+
+VERIFICAR - EX 04
+
+function checarAngulo(){
+  
+  if(numero >0 && numero < 90){
+    return 'angulo agudo';
+  }else if(numero == 90){
+    return 'angulo reto'
+  }else if(numero > 90 && numero < 180){
+    return 'angulo obtuso'
+  }else if(numero == 0 || numero == 180){
+    return 'angulo raso'
+  }else if(numero >180 && numero <360){
+    return 'angulo concavo'
+  }else(numero === 360){
+    return 'angulo completo'
+  }
+  
+}
+   
+let numero = prompt('digite um numero');
+  console.log(checarAngulo(numero));
